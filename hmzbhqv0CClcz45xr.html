@@ -1,0 +1,243 @@
+<html><head><base href="." />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Constrular - Materiais de Construção</title>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  :root {
+    --primary: #e65100;
+    --secondary: #ff8f00;
+    --light: #fff3e0;
+  }
+
+  header {
+    background: var(--primary);
+    color: white;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .menu {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+  }
+
+  .menu a:hover {
+    color: var(--light);
+  }
+
+  .hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1503387762-592deb58ef4e');
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    margin-top: 4rem;
+  }
+
+  .hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .cta-button {
+    background: var(--primary);
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .cta-button:hover {
+    background: var(--secondary);
+  }
+
+  .products {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 1rem;
+  }
+
+  .products h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary);
+  }
+
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+
+  .product-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+
+  .product-icon {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 1rem;
+  }
+
+  footer {
+    background: var(--primary);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  @keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+  }
+
+  .floating {
+    animation: float 3s ease-in-out infinite;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+          <path d="M12,3L2,12H5V20H19V12H22L12,3M12,7.7L16.2,12H7.8L12,7.7M7,18V14H17V18H7Z"/>
+        </svg>
+        Constrular
+      </div>
+      <div class="menu">
+        <a href="https://example.com/produtos">Produtos</a>
+        <a href="https://example.com/servicos">Serviços</a>
+        <a href="https://example.com/sobre">Sobre</a>
+        <a href="https://example.com/contato">Contato</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Construa seus sonhos conosco</h1>
+      <p>Os melhores materiais de construção para sua obra</p>
+      <button class="cta-button">Conheça nossos produtos</button>
+    </div>
+  </section>
+
+  <section class="products">
+    <h2>Produtos em Destaque</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <svg class="product-icon floating" viewBox="0 0 24 24" fill="var(--primary)">
+          <path d="M12,3L2,12H5V20H19V12H22L12,3M12,7.7L16.2,12H7.8L12,7.7M7,18V14H17V18H7Z"/>
+        </svg>
+        <h3>Cimento</h3>
+        <p>Todas as marcas</p>
+        <p class="price">A partir de R$ 28,90</p>
+      </div>
+
+      <div class="product-card">
+        <svg class="product-icon floating" viewBox="0 0 24 24" fill="var(--primary)">
+          <path d="M19,6H5A2,2 0 0,0 3,8V16A2,2 0 0,0 5,18H19A2,2 0 0,0 21,16V8A2,2 0 0,0 19,6M19,16H5V8H19V16Z"/>
+        </svg>
+        <h3>Tijolos</h3>
+        <p>Diversos modelos</p>
+        <p class="price">A partir de R$ 1,20/un</p>
+      </div>
+
+      <div class="product-card">
+        <svg class="product-icon floating" viewBox="0 0 24 24" fill="var(--primary)">
+          <path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"/>
+        </svg>
+        <h3>Areia</h3>
+        <p>Fina e grossa</p>
+        <p class="price">A partir de R$ 120,00/m³</p>
+      </div>
+
+      <div class="product-card">
+        <svg class="product-icon floating" viewBox="0 0 24 24" fill="var(--primary)">
+          <path d="M3,6H21V18H3V6M12,9A3,3 0 0,1 15,12A3,3 0 0,1 12,15A3,3 0 0,1 9,12A3,3 0 0,1 12,9M7,8A2,2 0 0,1 5,10V14A2,2 0 0,1 7,16H17A2,2 0 0,1 19,14V10A2,2 0 0,1 17,8H7Z"/>
+        </svg>
+        <h3>Ferramentas</h3>
+        <p>Linha completa</p>
+        <p class="price">Diversos preços</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2024 Constrular - Todos os direitos reservados</p>
+  </footer>
+
+  <script>
+    // Adiciona comportamento de scroll suave aos links do menu
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Adiciona classe 'floating' aos cards no hover
+    document.querySelectorAll('.product-card').forEach(card => {
+      card.addEventListener('mouseenter', () => {
+        card.querySelector('.product-icon').classList.add('floating');
+      });
+      card.addEventListener('mouseleave', () => {
+        card.querySelector('.product-icon').classList.remove('floating');
+      });
+    });
+  </script>
+</body>
+</html>
